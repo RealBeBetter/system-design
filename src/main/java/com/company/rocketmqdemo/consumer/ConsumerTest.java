@@ -16,7 +16,7 @@ public class ConsumerTest implements RocketMQListener<String> {
 
     @Override
     public void onMessage(String s) {
-        log.info("ConsumerTest - 接受到消息:" + s);
+        log.info("ConsumerTest - 接收到消息:" + s);
     }
 
 }
