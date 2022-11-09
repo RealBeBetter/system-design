@@ -10,6 +10,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 缓存相关使用，参考：
+ * https://blog.csdn.net/tec_1535/article/details/126158958
+ *
  * @author Real
  * Date: 2022/11/6 23:36
  */
@@ -31,17 +34,21 @@ public class CacheCreate {
         LoadingCache<String, String> cache = CacheBuilder.newBuilder()
                 // 最大缓存数量
                 .maximumSize(3)
+                // 记录缓存命中
+                .recordStats()
                 // 缓存失效时间
                 .expireAfterAccess(3, TimeUnit.MINUTES)
                 .build(new CacheLoader<String, String>() {
                     @Override
-                    public String load(String key)  {
+                    public String load(String key) {
                         return DATA_MAP.get(key);
                     }
                 });
 
         try {
             System.out.println(cache.get("1"));
+            // 输出缓存命中情况
+            System.out.println(cache.stats());
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
