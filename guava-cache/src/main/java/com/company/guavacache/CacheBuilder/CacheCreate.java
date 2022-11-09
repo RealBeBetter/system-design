@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @author Real
  * Date: 2022/11/6 23:36
  */
-public class Cache {
+public class CacheCreate {
 
     /**
      * 创建缓存项
