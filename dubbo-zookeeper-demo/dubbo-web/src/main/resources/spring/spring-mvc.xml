@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/cache" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="controller"/>
+
+    <!--1. 给Dubbo配置Name-->
+    <dubbo:application name="dubbo-web"/>
+    <!--2. 配置注册中心-->
+    <dubbo:registry address="zookeeper://192.168.123.81:2181"/>
+    <!--3. 配置包扫描范围-->
+    <dubbo:annotation package="controller"/>
+
+</beans>
