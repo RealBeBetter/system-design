@@ -1,14 +1,11 @@
 package com.company.rabbitmq.deadLetter;
 
 import com.company.rabbitmq.utils.RabbitMQUtil;
-import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**

@@ -1,7 +1,6 @@
 package com.company.rabbitmq.direct;
 
 import com.company.rabbitmq.utils.RabbitMQUtil;
-import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 
 import java.io.IOException;

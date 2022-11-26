@@ -1,7 +1,6 @@
 package com.company.rabbitmq.deadLetter;
 
 import com.company.rabbitmq.utils.RabbitMQUtil;
-import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 
 import java.io.IOException;

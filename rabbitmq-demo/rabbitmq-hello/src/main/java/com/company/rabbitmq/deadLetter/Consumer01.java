@@ -2,7 +2,6 @@ package com.company.rabbitmq.deadLetter;
 
 import com.company.rabbitmq.utils.RabbitMQUtil;
 import com.rabbitmq.client.BuiltinExchangeType;
-import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
 
