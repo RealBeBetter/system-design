@@ -33,6 +33,7 @@ public class CacheRemove {
     }
 
     public static void main(String[] args) {
+        // 注意，如果 GET 返回 null，将会出现 NPE 错误。
         LoadingCache<String, String> cache = CacheBuilder.newBuilder()
                 .maximumSize(3)
                 // 过期时间设置为 3 秒
