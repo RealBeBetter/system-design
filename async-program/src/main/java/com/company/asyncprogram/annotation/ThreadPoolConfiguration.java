@@ -19,6 +19,11 @@ public class ThreadPoolConfiguration {
 
     public static final Logger log = LoggerFactory.getLogger(ThreadPoolConfiguration.class);
 
+    /**
+     * 系统检查池服务执行
+     *
+     * @return {@link ThreadPoolExecutor}
+     */
     @Bean(name = "defaultThreadPoolExecutor", destroyMethod = "shutdown")
     public ThreadPoolExecutor systemCheckPoolExecutorService() {
 

@@ -15,6 +15,12 @@ public class CallableAndFuture {
             .setNameFormat("demo-pool-%d").build(), new ThreadPoolExecutor.AbortPolicy());
 
 
+    /**
+     * 可调用类
+     *
+     * @author Real
+     * @since 2022/12/10 00:47
+     */
     static class MyCallable implements Callable<String> {
         @Override
         public String call() throws Exception {
