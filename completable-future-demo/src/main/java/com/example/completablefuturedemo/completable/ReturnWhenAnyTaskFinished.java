@@ -30,9 +30,9 @@ public class ReturnWhenAnyTaskFinished {
                 }, executorService))
                 .toArray(CompletableFuture[]::new));
         executorService.shutdown();
-
+        long end = System.currentTimeMillis();
         // 3. 获取结果
-        System.out.println(completableFuture.join());
+        System.out.println(completableFuture.join() + "运行时间：" + (end - start));
     }
 
 }

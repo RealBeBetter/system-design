@@ -9,7 +9,7 @@ import java.util.concurrent.*;
  * @since 2022/12/9 1:38
  */
 public class CallableAndFuture {
-    public static ExecutorService executorService = new ThreadPoolExecutor(4, 40,
+    public static final ExecutorService executorService = new ThreadPoolExecutor(4, 40,
             0L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<Runnable>(1024), new ThreadFactoryBuilder()
             .setNameFormat("demo-pool-%d").build(), new ThreadPoolExecutor.AbortPolicy());
