@@ -24,8 +24,8 @@ public class SqlProducer {
     /**
      * 选择器，SQL92过滤消息
      */
-    public void selector() {
-        String text = "SQL92过滤消息" + System.currentTimeMillis();
+    public void sendSqlMessage() {
+        String text = "SQL92过滤消息，时间戳：" + System.currentTimeMillis();
         log.info(text);
         Message<String> message = MessageBuilder.withPayload(text).build();
         // 设置参数
@@ -33,7 +33,7 @@ public class SqlProducer {
         map.put("a", 2);
         map.put("b", 10);
         rocketMQTemplate.convertAndSend("sql_topic", message, map);
-        log.info("已发送...");
+        log.info("SQL92过滤消息已发送...");
     }
 
 }

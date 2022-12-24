@@ -19,10 +19,10 @@ public class SqlController {
     @Resource
     private SqlProducer sqlProducer;
 
-    @GetMapping("/selector")
+    @GetMapping("/sql")
     public Object selector() {
         // SQL92过滤
-        sqlProducer.selector();
+        sqlProducer.sendSqlMessage();
         return "过滤消息样例";
     }
 
