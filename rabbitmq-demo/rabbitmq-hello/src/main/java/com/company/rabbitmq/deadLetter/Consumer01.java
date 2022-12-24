@@ -12,18 +12,26 @@ import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月17日 10:21
+ * @author Real
+ * @date 2021年08月17日 10:21
  */
 public class Consumer01 {
 
-    // 普通交换机名称
+    /**
+     * 普通交换机名称
+     */
     public static final String NORMAL_EXCHANGE = "normal_exchange";
-    // 死信交换机名称
+    /**
+     * 死信交换机名称
+     */
     public static final String DEAD_EXCHANGE = "dead_exchange";
-    // 普通队列名称
+    /**
+     * 普通队列名称
+     */
     public static final String NORMAL_QUEUE = "normal_queue";
-    // 死信队列名称
+    /**
+     * 死信队列名称
+     */
     public static final String DEAD_QUEUE = "dead_queue";
 
     public static void main(String[] args) throws IOException, TimeoutException {
