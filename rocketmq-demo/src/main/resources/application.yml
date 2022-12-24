@@ -1,7 +1,12 @@
-# 应用名称
+# 应用端口
+server:
+  port: 8080
+# 应用名
 spring:
   application:
     name: rocketmq-demo
+
+
 # rocketmq 配置
 rocketmq:
   # rocketmq 服务地址集群由 `;`分开
