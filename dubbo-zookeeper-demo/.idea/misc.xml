@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/guava-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/async-program/pom.xml" />
+        <option value="$PROJECT_DIR$/anti-brushing/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-mq/pom.xml" />
+        <option value="$PROJECT_DIR$/distributed-transactions/pom.xml" />
+        <option value="$PROJECT_DIR$/limit-policy/pom.xml" />
+        <option value="$PROJECT_DIR$/distributed-id/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-zookeeper-demo/dubbo-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-zookeeper-demo/dubbo-service/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-zookeeper-demo/dubbo-web/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-hello/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-task/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-demo/springboot-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-zookeeper-demo-test/dubbo-zookeeper-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/completable-future-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/idempotency-guarantee/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-zookeeper-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-generator/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

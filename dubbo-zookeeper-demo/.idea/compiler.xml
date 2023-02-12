@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="limit-policy" />
+        <module name="RabbitMQ-Hello" />
+        <module name="rabbitmq-demo" />
+        <module name="completable-future-demo" />
+        <module name="system-design" />
+        <module name="idempotency-guarantee" />
+        <module name="guava-cache" />
+        <module name="async-program" />
+        <module name="mybatis-plus-spring-boot" />
+        <module name="mybatis-plus-generator" />
+        <module name="mybatis-plus-mybatis" />
+        <module name="redis-mq" />
+        <module name="dubbo-service" />
+        <module name="distributed-transactions" />
+        <module name="dubbo-interface" />
+        <module name="RabbitMQ-Task" />
+        <module name="dubbo-web" />
+        <module name="mybatis-plus-spring" />
+        <module name="distributed-id" />
+        <module name="rocketmq-demo" />
+        <module name="springboot-rabbitmq" />
+        <module name="dubbo-zookeeper-demo" />
+        <module name="anti-brushing" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="anti-brushing" target="1.8" />
+      <module name="async-program" target="1.8" />
+      <module name="completable-future-demo" target="1.8" />
+      <module name="distributed-id" target="1.8" />
+      <module name="distributed-transactions" target="1.8" />
+      <module name="dubbo-interface" target="1.8" />
+      <module name="dubbo-service" target="1.8" />
+      <module name="dubbo-web" target="1.8" />
+      <module name="dubbo-zookeeper-demo" target="1.8" />
+      <module name="guava-cache" target="1.8" />
+      <module name="idempotency-guarantee" target="1.8" />
+      <module name="limit-policy" target="1.8" />
+      <module name="mybatis-plus-demo" target="1.8" />
+      <module name="mybatis-plus-generator" target="1.8" />
+      <module name="mybatis-plus-generator-demo" target="1.8" />
+      <module name="mybatis-plus-mybatis" target="1.8" />
+      <module name="mybatis-plus-spring" target="1.8" />
+      <module name="mybatis-plus-spring-boot" target="1.8" />
+      <module name="rabbitmq-demo" target="1.8" />
+      <module name="RabbitMQ-Hello" target="8" />
+      <module name="RabbitMQ-Task" target="14" />
+      <module name="redis-mq" target="1.8" />
+      <module name="rocketmq-demo" target="1.8" />
+      <module name="rocketmq-demo-test" target="1.8" />
+      <module name="springboot-rabbitmq" target="1.8" />
+      <module name="system-design" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="distributed-id" options="" />
+      <module name="idempotency-guarantee" options="-parameters" />
+      <module name="mybatis-plus-generator" options="-parameters" />
+      <module name="mybatis-plus-generator-demo" options="-parameters" />
+      <module name="mybatis-plus-mybatis" options="-parameters" />
+      <module name="mybatis-plus-spring" options="-parameters" />
+      <module name="mybatis-plus-spring-boot" options="-parameters" />
+      <module name="rocketmq-demo" options="" />
+      <module name="springboot-rabbitmq" options="-parameters" />
+    </option>
+  </component>
+</project>
