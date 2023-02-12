@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/anti-brushing/pom.xml" />
+        <option value="$PROJECT_DIR$/async-program/pom.xml" />
+        <option value="$PROJECT_DIR$/completable-future-demo/pom.xml" />
       </list>
     </option>
   </component>
