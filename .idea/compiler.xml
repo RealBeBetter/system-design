@@ -22,6 +22,7 @@
         <module name="distributed-id" />
         <module name="rocketmq-demo" />
         <module name="dubbo-zookeeper-demo" />
+        <module name="spring-annotation" />
         <module name="anti-brushing" />
       </profile>
     </annotationProcessing>

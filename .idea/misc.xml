@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/rabbitmq-demo/pom.xml" />
         <option value="$PROJECT_DIR$/redis-mq/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-annotation/pom.xml" />
       </list>
     </option>
   </component>
