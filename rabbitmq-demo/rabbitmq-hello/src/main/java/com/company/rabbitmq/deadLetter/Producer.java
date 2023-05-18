@@ -8,8 +8,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月29日 10:48
+ * @author Real
+ * @date 2021年08月29日 10:48
  */
 public class Producer {
 
