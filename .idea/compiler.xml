@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="limit-policy" />
         <module name="rabbitmq-demo" />
+        <module name="common-util" />
         <module name="completable-future-demo" />
         <module name="system-design" />
         <module name="idempotency-guarantee" />

@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/custom-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/lambda-function-demo/pom.xml" />
         <option value="$PROJECT_DIR$/quartz-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/common-util/pom.xml" />
       </list>
     </option>
   </component>

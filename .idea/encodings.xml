@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/anti-brushing/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/async-program/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/async-program/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-util/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/completable-future-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/completable-future-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crawl-order-multi-thread/src/main/java" charset="UTF-8" />
