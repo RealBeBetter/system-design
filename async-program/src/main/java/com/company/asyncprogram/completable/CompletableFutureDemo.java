@@ -41,7 +41,7 @@ public class CompletableFutureDemo {
 
         //任务3：任务1和任务2完成后执行：泡茶
         CompletableFuture<String> f3 =
-                f1.thenCombine(f2, (__, tf) -> {
+                f1.thenCombine(f2, (val, tf) -> {
                     System.out.println("T1:拿到茶叶:" + tf);
                     System.out.println("T1:泡茶...");
                     return "上茶:" + tf;

@@ -18,11 +18,18 @@
         <option value="$PROJECT_DIR$/rabbitmq-demo/pom.xml" />
         <option value="$PROJECT_DIR$/redis-mq/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-demo/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/crawl-order-multi-thread/pom.xml" />
         <option value="$PROJECT_DIR$/custom-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/lambda-function-demo/pom.xml" />
         <option value="$PROJECT_DIR$/quartz-demo/pom.xml" />
         <option value="$PROJECT_DIR$/common-util/pom.xml" />
+=======
+        <option value="$PROJECT_DIR$/spring-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/custom-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/lambda-function-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/quartz-demo/pom.xml" />
+>>>>>>> fb5f3d21f30b02926fa004407c0b2a5937f12201
       </list>
     </option>
   </component>

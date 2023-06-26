@@ -19,7 +19,10 @@
         <module name="guava-cache" />
         <module name="mybatis-plus-mybatis" />
         <module name="redis-mq" />
+<<<<<<< HEAD
         <module name="crawl-order-multi-thread" />
+=======
+>>>>>>> fb5f3d21f30b02926fa004407c0b2a5937f12201
         <module name="custom-annotation" />
         <module name="distributed-transactions" />
         <module name="mybatis-plus-spring" />
@@ -27,13 +30,17 @@
         <module name="rocketmq-demo" />
         <module name="quartz-demo" />
         <module name="dubbo-zookeeper-demo" />
+        <module name="spring-annotation" />
         <module name="anti-brushing" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
       <module name="crawl-order-multi-thread" options="-parameters" />
+=======
+>>>>>>> fb5f3d21f30b02926fa004407c0b2a5937f12201
       <module name="custom-annotation" options="-parameters" />
       <module name="idempotency-guarantee" options="-parameters" />
       <module name="lambda-function-demo" options="-parameters" />
