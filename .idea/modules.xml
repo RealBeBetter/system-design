@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/anti-brushing/anti-brushing.iml" filepath="$PROJECT_DIR$/anti-brushing/anti-brushing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/async-program/async-program.iml" filepath="$PROJECT_DIR$/async-program/async-program.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-util/common-util.iml" filepath="$PROJECT_DIR$/common-util/common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/completable-future-demo/completable-future-demo.iml" filepath="$PROJECT_DIR$/completable-future-demo/completable-future-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crawl-order-multi-thread/crawl-order-multi-thread.iml" filepath="$PROJECT_DIR$/crawl-order-multi-thread/crawl-order-multi-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-annotation/custom-annotation.iml" filepath="$PROJECT_DIR$/custom-annotation/custom-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-id/distributed-id.iml" filepath="$PROJECT_DIR$/distributed-id/distributed-id.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transactions/distributed-transactions.iml" filepath="$PROJECT_DIR$/distributed-transactions/distributed-transactions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-demo/dubbo-zookeeper-demo.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-demo/dubbo-zookeeper-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guava-cache/guava-cache.iml" filepath="$PROJECT_DIR$/guava-cache/guava-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/idempotency-guarantee/idempotency-guarantee.iml" filepath="$PROJECT_DIR$/idempotency-guarantee/idempotency-guarantee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambda-function-demo/lambda-function-demo.iml" filepath="$PROJECT_DIR$/lambda-function-demo/lambda-function-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/limit-policy/limit-policy.iml" filepath="$PROJECT_DIR$/limit-policy/limit-policy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-demo.iml" filepath="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-generator/mybatis-plus-generator.iml" filepath="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-generator/mybatis-plus-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-mybatis/mybatis-plus-mybatis.iml" filepath="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-mybatis/mybatis-plus-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring/mybatis-plus-spring.iml" filepath="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring/mybatis-plus-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz-demo/quartz-demo.iml" filepath="$PROJECT_DIR$/quartz-demo/quartz-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" filepath="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-mq/redis-mq.iml" filepath="$PROJECT_DIR$/redis-mq/redis-mq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-demo.iml" filepath="$PROJECT_DIR$/rocketmq-demo/rocketmq-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-design.iml" filepath="$PROJECT_DIR$/system-design.iml" />
+    </modules>
+  </component>
+</project>
