@@ -9,17 +9,21 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月02日 14:44
  * 消息在手动应答的时候应该是不丢失的，会重新放到消息队列中等待重新消费
+ *
+ * @author wei.song
+ * @date 2021年08月02日 14:44
  */
 public class Task02 {
 
-    // 队列名称
+    /**
+     * 任务队列名称
+     */
     public static final String TASK_QUEUE_NAME = "ack_queue";
 
-    // 发送消息
+
     public static void main(String[] args) throws IOException, TimeoutException {
+        // 发送消息
         Channel channel = RabbitMQUtil.getChannel();
 
         // 发布确认
@@ -37,6 +41,7 @@ public class Task02 {
             channel.basicPublish("", TASK_QUEUE_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
             System.out.println("生产者发送消息：" + message);
         }
+
     }
 
 }

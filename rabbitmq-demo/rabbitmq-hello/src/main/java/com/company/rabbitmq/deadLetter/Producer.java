@@ -13,11 +13,13 @@ import java.util.concurrent.TimeoutException;
  */
 public class Producer {
 
-    // 普通交换机名称
+    /**
+     * 普通交换机名称
+     */
     public static final String NORMAL_EXCHANGE = "normal_exchange";
 
-    // 死信队列生产者
     public static void main(String[] args) throws IOException, TimeoutException {
+        // 死信队列生产者
         Channel channel = RabbitMQUtil.getChannel();
 
         // 设置死信消息 TTL时间 单位毫秒值

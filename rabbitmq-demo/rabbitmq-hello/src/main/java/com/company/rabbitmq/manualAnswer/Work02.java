@@ -8,17 +8,20 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月02日 14:52
  * 消息在手动应答的时候应该是不丢失的，会重新放到消息队列中等待重新消费
+ *
+ * @author wei.song
+ * @date 2021年08月02日 14:52
  */
 public class Work02 {
 
-    // 队列名称
+    /**
+     * 任务队列名称
+     */
     public static final String TASK_QUEUE_NAME = "ack_queue";
 
-    // 接收消息
     public static void main(String[] args) throws IOException, TimeoutException {
+        // 接收消息
         Channel channel = RabbitMQUtil.getChannel();
         System.out.println("C1等待接收消息处理时间较短...");
 
@@ -31,8 +34,8 @@ public class Work02 {
             }
             System.out.println("接收到的消息：" + new String(message.getBody()));
 
-            // 手动应答
             /**
+             * 手动应答
              * 1.消息的标识 tag
              * 2.是否批量应答 false不批量应答Channel中的消息
              */

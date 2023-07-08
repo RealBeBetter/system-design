@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
- * @ author： Real
- * @ date： 2021年08月29日 13:46
  * 发送消息  http://localhost:8080/ttl/sendMsg/嘻嘻嘻
+ *
+ * @author wei.song
+ * @date 2021年08月29日 13:46
  */
 @Slf4j
 @RestController
@@ -24,7 +25,11 @@ public class SendMessageController {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    // 开始发消息
+    /**
+     * 发送消息
+     *
+     * @param message 消息
+     */
     @GetMapping("/sendMsg/{message}")
     public void sendMsg(@PathVariable String message) {
         log.info("当前时间：{}，发送一条消息给TTL队列：{}", new Date(), message);
@@ -32,7 +37,12 @@ public class SendMessageController {
         rabbitTemplate.convertAndSend("X", "XB", "消息来自ttl为40s的队列：" + message);
     }
 
-    // 开始发消息 消息 TTL
+    /**
+     * 发送TTL消息
+     *
+     * @param message 消息
+     * @param ttlTime ttl时间
+     */
     @GetMapping("/sendExpirationMsg/{message}/{ttlTime}")
     public void sendExpirationMsg(@PathVariable String message, @PathVariable String ttlTime) {
         log.info("当前时间：{}，发送一条时长为{}毫秒消息给QC：{}", new Date(), ttlTime, message);
@@ -43,7 +53,12 @@ public class SendMessageController {
         });
     }
 
-    // 发送消息，基于延迟插件的消息以及延迟时间
+    /**
+     * 发送消息，基于延迟插件的消息以及延迟时间
+     *
+     * @param message   消息
+     * @param delayTime 延迟时间
+     */
     @GetMapping("/sendDelayMsg/{message}/{delayTime}")
     public void sendDelayMsg(@PathVariable String message, @PathVariable Integer delayTime) {
         log.info("当前时间：{}，发送一条延迟时长为{}毫秒消息给延迟队列delayed.queue：{}", new Date(), delayTime, message);

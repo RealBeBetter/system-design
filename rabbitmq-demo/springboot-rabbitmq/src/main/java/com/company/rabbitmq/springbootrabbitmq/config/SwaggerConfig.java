@@ -10,8 +10,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @ author： Real
- * @ date： 2021年08月29日 12:41
+ * @author wei.song
+ * @date 2021年08月29日 12:41
  */
 @Configuration
 @EnableSwagger2

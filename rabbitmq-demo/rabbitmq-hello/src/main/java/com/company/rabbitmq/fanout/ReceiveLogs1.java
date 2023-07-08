@@ -11,9 +11,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月05日 14:17
  * Fanout接收消息
+ *
+ * @author wei.song
+ * @date 2021年08月05日 14:17
  */
 public class ReceiveLogs1 {
 
@@ -24,15 +25,15 @@ public class ReceiveLogs1 {
         // 声明一个交换机
         channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
 
-        // 声明一个临时队列
         /**
+         * 声明一个临时队列
          * 临时队列，消费者断开与队列的连接，临时队列就会自动删除
          * 产生的临时队列名称都是随机的
          */
         String QUEUE_NAME = channel.queueDeclare().getQueue();
 
-        // 队列绑定交换机
         /**
+         * 队列绑定交换机
          * 1.目的队列，2.源交换机，3.RoutingKey
          */
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "");
@@ -42,7 +43,8 @@ public class ReceiveLogs1 {
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             System.out.println("ReceiveLogs1接收到的消息：" + new String(message.getBody(), StandardCharsets.UTF_8));
         };
-        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
+        });
     }
 
 }

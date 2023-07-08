@@ -9,9 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @ author： Real
- * @ date： 2021年08月29日 13:02
  * TTL队列 配置文件类
+ *
+ * @author wei.song
+ * @date 2021年08月29日 13:02
  */
 @Configuration
 public class TtlQueueConfig {
@@ -65,7 +66,11 @@ public class TtlQueueConfig {
         return QueueBuilder.durable(QUEUE_B).withArguments(arguments).build();
     }
 
-    // 声明QC普通队列，不设置TTL时间
+    /**
+     * 声明QC普通队列，不设置TTL时间
+     *
+     * @return {@link Queue}
+     */
     @Bean("queueC")
     public Queue queueC() {
         Map<String, Object> arguments = new HashMap<>();
@@ -88,16 +93,19 @@ public class TtlQueueConfig {
                                   @Qualifier("xExchange") DirectExchange xExchange) {
         return BindingBuilder.bind(queueA).to(xExchange).with("XA");
     }
+
     @Bean
     public Binding queueBBindingX(@Qualifier("queueB") Queue queueB,
                                   @Qualifier("xExchange") DirectExchange xExchange) {
         return BindingBuilder.bind(queueB).to(xExchange).with("XB");
     }
+
     @Bean
     public Binding queueCBindingX(@Qualifier("queueC") Queue queueC,
                                   @Qualifier("xExchange") DirectExchange xExchange) {
         return BindingBuilder.bind(queueC).to(xExchange).with("XC");
     }
+
     @Bean
     public Binding queueDBindingY(@Qualifier("queueD") Queue queueD,
                                   @Qualifier("yExchange") DirectExchange yExchange) {

@@ -12,13 +12,14 @@ import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月04日 10:08
  * 发布确认：
  * 1.单个发布确认
  * 2.批量发布确认
  * 3.异步批量确认
  * 比较三者耗费的时间差异
+ *
+ * @author wei.song
+ * @date 2021年08月04日 10:08
  */
 public class Confirm {
 
@@ -32,10 +33,16 @@ public class Confirm {
         // Confirm.publishBatchMessage();  // 一共发布1000条信息，批量发布确认，花了159ms
         // 3. 异步批量确认
         Confirm.publishAsyncMessage();  // 一共发布1000条信息，异步发布确认，花了97ms
-                                        // 一共发布1000条信息，异步发布确认，花了46ms
+        // 一共发布1000条信息，异步发布确认，花了46ms
     }
 
-    // 单个发布确认
+    /**
+     * 单个发布确认
+     *
+     * @throws IOException          ioexception
+     * @throws TimeoutException     超时异常
+     * @throws InterruptedException 中断异常
+     */
     public static void publishSingleMessage() throws IOException, TimeoutException, InterruptedException {
         Channel channel = RabbitMQUtil.getChannel();
 
@@ -67,8 +74,13 @@ public class Confirm {
 
     }
 
-
-    // 批量发布确认
+    /**
+     * 批量发布确认
+     *
+     * @throws IOException          ioexception
+     * @throws TimeoutException     超时异常
+     * @throws InterruptedException 中断异常
+     */
     public static void publishBatchMessage() throws IOException, TimeoutException, InterruptedException {
         Channel channel = RabbitMQUtil.getChannel();
 
@@ -103,7 +115,13 @@ public class Confirm {
 
     }
 
-    // 异步发布确认
+    /**
+     * 异步发布确认
+     *
+     * @throws IOException          ioexception
+     * @throws TimeoutException     超时异常
+     * @throws InterruptedException 中断异常
+     */
     public static void publishAsyncMessage() throws IOException, TimeoutException, InterruptedException {
         Channel channel = RabbitMQUtil.getChannel();
 
@@ -134,8 +152,8 @@ public class Confirm {
             System.out.println("消息发送成功：" + deliveryTag);
         };
 
-        // 消息确认失败，回调函数
         /**
+         * 消息确认失败，回调函数
          * 1.消息的标识
          * 2.是否为批量确认
          */
@@ -146,8 +164,8 @@ public class Confirm {
         };
 
 
-        // 添加监听器，监听哪些消息发送成功了，哪些消息发送失败了
         /**
+         * 添加监听器，监听哪些消息发送成功了，哪些消息发送失败了
          * 1.监听发送成功的消息
          * 2.监听发送失败的消息
          */

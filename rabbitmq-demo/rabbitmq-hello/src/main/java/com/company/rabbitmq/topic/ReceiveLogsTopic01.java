@@ -11,13 +11,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月17日 9:26
  * 声明主题交换机及相关队列
+ *
+ * @author wei.song
+ * @date 2021年08月17日 9:26
  */
 public class ReceiveLogsTopic01 {
 
-    // 交换机名称
     public static final String EXCHANGE_NAME = "topic_logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {

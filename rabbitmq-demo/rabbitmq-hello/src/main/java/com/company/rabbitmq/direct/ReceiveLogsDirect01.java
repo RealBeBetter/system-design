@@ -12,12 +12,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月16日 21:09
+ * @author wei.song
+ * @date 2021年08月16日 21:09
  */
 public class ReceiveLogsDirect01 {
 
-    // 交换机名字
+    /**
+     * 交换机名字
+     */
     public static final String EXCHANGE_NAME = "direct_logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {
@@ -37,7 +39,8 @@ public class ReceiveLogsDirect01 {
         };
 
         // 消费者取消消息时回调接口，接收消息
-        channel.basicConsume("console", true, deliverCallback, consumerTag -> {});
+        channel.basicConsume("console", true, deliverCallback, consumerTag -> {
+        });
     }
 
 }

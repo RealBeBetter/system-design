@@ -9,12 +9,14 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月16日 21:23
+ * @author wei.song
+ * @date 2021年08月16日 21:23
  */
 public class DirectLogs {
 
-    // 交换机名称
+    /**
+     * 交换机名称
+     */
     public static final String EXCHANGE_NAME = "direct_logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {

@@ -10,13 +10,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月17日 9:26
  * 声明主题交换机及相关队列
+ *
+ * @author wei.song
+ * @date 2021年08月17日 9:26
  */
 public class ReceiveLogsTopic02 {
 
-    // 交换机名称
     public static final String EXCHANGE_NAME = "topic_logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {
@@ -36,7 +36,8 @@ public class ReceiveLogsTopic02 {
             System.out.println("C2接收到消息：" + new String(message.getBody(), StandardCharsets.UTF_8));
             System.out.println("接收队列：" + queueName + " 绑定键： " + message.getEnvelope().getRoutingKey());
         };
-        channel.basicConsume(queueName, true,  deliverCallback, consumerTag -> {});
+        channel.basicConsume(queueName, true, deliverCallback, consumerTag -> {
+        });
     }
 
 }

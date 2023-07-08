@@ -14,7 +14,9 @@ import java.util.concurrent.TimeoutException;
  */
 public class Consumer02 {
 
-    // 死信队列名称
+    /**
+     * 死信队列名称
+     */
     public static final String DEAD_QUEUE = "dead_queue";
 
     public static void main(String[] args) throws IOException, TimeoutException {

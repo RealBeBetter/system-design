@@ -9,15 +9,20 @@ import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 /**
- * @ author： Real
- * @ date： 2021年08月29日 13:58
- * 队列TTL消费者
+ * 死信队列消费者
+ *
+ * @author wei.song
+ * @date 2021年08月29日 13:58
  */
 @Slf4j
 @Component
 public class DeadLetterQueueConsumer {
 
-    // 接收消息
+    /**
+     * 接收消息
+     *
+     * @param message 消息
+     */
     @RabbitListener(queues = "QD")
     public void receiveD(Message message) {
         String msg = new String(message.getBody(), StandardCharsets.UTF_8);

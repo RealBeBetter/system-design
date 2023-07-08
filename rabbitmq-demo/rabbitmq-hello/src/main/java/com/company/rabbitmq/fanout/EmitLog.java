@@ -9,13 +9,16 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月05日 14:40
  * 发消息给交换机
+ *
+ * @author wei.song
+ * @date 2021年08月05日 14:40
  */
 public class EmitLog {
 
-    // 交换机名称
+    /**
+     * 交换机名称
+     */
     public static final String EXCHANGE_NAME = "logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {

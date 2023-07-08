@@ -10,12 +10,13 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月02日 10:26
- * 第一个工作线程
+ * @author wei.song
+ * @date 2021年08月02日 10:26
  */
 public class Worker01 {
-    // 队列名称
+    /**
+     * 队列名称
+     */
     public static final String QUEUE_NAME = "hello";
 
     public static void main(String[] args) throws IOException, TimeoutException {
@@ -33,4 +34,5 @@ public class Worker01 {
         System.out.println("Thread2等待接收消息...");
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, cancelCallback);
     }
+
 }

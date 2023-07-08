@@ -11,13 +11,11 @@ import java.util.Set;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月17日 9:40
- * 生产者
+ * @author wei.song
+ * @date 2021年08月17日 9:40
  */
 public class TopicLogs {
 
-    // 交换机名称
     public static final String EXCHANGE_NAME = "topic_logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {
