@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月02日 9:55
+ * 消费者
+ *
+ * @author wei.song
+ * @date 2021年08月02日 9:55
  */
 public class Consumer {
 

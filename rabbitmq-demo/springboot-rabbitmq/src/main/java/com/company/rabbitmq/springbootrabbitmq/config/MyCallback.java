@@ -11,9 +11,10 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 /**
- * @ author： Real
- * @ date： 2021年08月31日 11:23
  * 发布确认的回调接口
+ *
+ * @author wei.song
+ * @date 2021年08月31日 11:23
  */
 @Slf4j
 @Component
@@ -22,7 +23,6 @@ public class MyCallback implements RabbitTemplate.ConfirmCallback, RabbitTemplat
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    // 注入
     @PostConstruct
     public void init() {
         rabbitTemplate.setConfirmCallback(this);
@@ -31,17 +31,17 @@ public class MyCallback implements RabbitTemplate.ConfirmCallback, RabbitTemplat
 
     /**
      * 交换机确认回调方法
+     *
      * @param correlationData
      * @param ack
-     * @param cause
-     * 1.发消息交换机接收到了回调
-     *  1.1 correlationData 保存回调消息的ID及相关信息
-     *  1.2 交换机收到消息，ack = true
-     *  1.3 cause null
-     * 2.发消息交换机接收失败了回调
-     *  2.1 correlationData 保存回调消息的ID及相关信息
-     *  2.2 交换机收到消息
-     *  2.3 cause 失败的原因
+     * @param cause           1.发消息交换机接收到了回调
+     *                        1.1 correlationData 保存回调消息的ID及相关信息
+     *                        1.2 交换机收到消息，ack = true
+     *                        1.3 cause null
+     *                        2.发消息交换机接收失败了回调
+     *                        2.1 correlationData 保存回调消息的ID及相关信息
+     *                        2.2 交换机收到消息
+     *                        2.3 cause 失败的原因
      */
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
@@ -57,6 +57,7 @@ public class MyCallback implements RabbitTemplate.ConfirmCallback, RabbitTemplat
      * Returned message callback.
      * 可以在消息传递过程中不可达目的地时将消息回退给生产者
      * 只有在消息不可达的情况下才会回退消息
+     *
      * @param message    the returned message.
      * @param replyCode  the reply code.
      * @param replyText  the reply text.

@@ -13,21 +13,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @ author： Real
- * @ date： 2021年08月30日 13:39
  * 延迟队列配置类
+ *
+ * @author wei.song
+ * @date 2021年08月30日 13:39
  */
 @Configuration
 public class DelayedQueueConfig {
 
-    // 交换机
     public static final String DELAYED_EXCHANGE_NAME = "delayed.exchange";
-    // 队列
     public static final String DELAYED_QUEUE_NAME = "delayed.queue";
-    // Routing Key
     public static final String DELAYED_ROUTING_KEY = "delayed.routingkey";
 
-    // 声明交换机，延迟交换机需要自定义，基于插件
+    /**
+     * 声明交换机，延迟交换机需要自定义，基于插件
+     *
+     * @return {@link CustomExchange}
+     */
     @Bean
     public CustomExchange delayedExchange() {
         /**
@@ -40,11 +42,9 @@ public class DelayedQueueConfig {
         Map<String, Object> arguments = new HashMap<>();
         // 延迟类型为直接类型
         arguments.put("x-delayed-type", "direct");
-        return new CustomExchange(DELAYED_EXCHANGE_NAME,
-                "x-delayed-message", false, false, arguments);
+        return new CustomExchange(DELAYED_EXCHANGE_NAME, "x-delayed-message", false, false, arguments);
     }
 
-    // 声明队列
     @Bean
     public Queue delayedQueue() {
         /**
@@ -57,7 +57,6 @@ public class DelayedQueueConfig {
         return new Queue(DELAYED_QUEUE_NAME);
     }
 
-    // 绑定
     @Bean
     public Binding delayedQueueBindingDelayedExchange(
             @Qualifier("delayedExchange") CustomExchange delayedExchange,
@@ -65,4 +64,5 @@ public class DelayedQueueConfig {
         // 此处需要调用一个构建方法，因为延迟交换机的类型，所以与之前有所不同
         return BindingBuilder.bind(delayedQueue).to(delayedExchange).with(DELAYED_ROUTING_KEY).noargs();
     }
+
 }

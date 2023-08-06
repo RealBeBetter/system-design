@@ -11,16 +11,15 @@ import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ author： Real
- * @ date： 2021年08月02日 9:24
  * 生产者： 发送消息
+ *
+ * @author wei.song
+ * @date 2021年08月02日 9:24
  */
 public class Producer {
 
-    // 队列名称
     public static final String QUEUE_NAME = "hello";
 
-    // 发送消息
     public static void main(String[] args) throws IOException, TimeoutException {
         // 创建一个连接工厂
         ConnectionFactory factory = new ConnectionFactory();

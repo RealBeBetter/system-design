@@ -18,7 +18,11 @@ import java.util.Date;
 @Component
 public class DelayedQueueConsumer {
 
-    // 监听消息，接收消息
+    /**
+     * 接收延迟队列，监听消息，接收消息
+     *
+     * @param message 消息
+     */
     @RabbitListener(queues = "delayed.queue")
     public void receiveDelayQueue(Message message) {
         String msg = new String(message.getBody(), StandardCharsets.UTF_8);
