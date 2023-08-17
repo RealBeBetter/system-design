@@ -3,6 +3,7 @@ package com.company.limitpolicy.controller;
 import com.google.common.util.concurrent.RateLimiter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,8 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 @RestController
-public class Controller {
+@RequestMapping("/guava")
+public class GuavaController {
 
     /**
      * 限流器，每秒钟可以创建两个令牌
