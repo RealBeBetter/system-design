@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -11,7 +13,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 /**
- * @author wei.song
+ * @author Real
  * @since 2023/2/12 14:41
  */
 @Slf4j
@@ -53,15 +55,16 @@ public class BuildAsyncTasks {
     }
 
     private List<Supplier<Integer>> buildTask(List<List<Integer>> lists) {
-        List<Supplier<Integer>> suppliers = Lists.newArrayList();
+        List<Supplier<Integer>> suppliers = new ArrayList<>();
         lists.forEach(list -> suppliers.add(() -> findFirstNumber(list)));
         return suppliers;
     }
 
     private Integer findFirstNumber(List<Integer> list) {
-        if (list == null || list.size() == 0) {
+        if (list == null || list.isEmpty()) {
             throw new IllegalArgumentException("current list is empty");
         }
+
         return list.stream().findFirst().orElse(0);
     }
 
@@ -72,20 +75,20 @@ public class BuildAsyncTasks {
     }
 
     private static class DefaultThreadFactory implements ThreadFactory {
-        private static final AtomicInteger POOL_NUMBER = new AtomicInteger(1);
+        private static final AtomicInteger POOL_NUMBER = new AtomicInteger();
         private final ThreadGroup group;
         private final AtomicInteger threadNumber = new AtomicInteger(1);
         private final String namePrefix;
 
         DefaultThreadFactory(String prefix) {
-            SecurityManager s = System.getSecurityManager();
-            group = (s != null) ? s.getThreadGroup() : Thread.currentThread().getThreadGroup();
+            SecurityManager securityManager = System.getSecurityManager();
+            group = (securityManager != null) ? securityManager.getThreadGroup() : Thread.currentThread().getThreadGroup();
             namePrefix = StringUtils.isEmpty(prefix) ? "pool-" + POOL_NUMBER.getAndIncrement() + "-thread-"
                     : "pool-" + prefix + "-" + POOL_NUMBER.getAndIncrement() + "-thread-";
         }
 
         @Override
-        public Thread newThread(Runnable runnable) {
+        public Thread newThread(@Nonnull Runnable runnable) {
             Thread thread = new Thread(group, runnable, namePrefix + threadNumber.getAndIncrement(), 0);
             if (thread.isDaemon()) {
                 thread.setDaemon(false);
