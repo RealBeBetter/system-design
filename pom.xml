@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.company</groupId>
     <artifactId>system-design</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>system-design</name>
     <description>Demo project for Spring Boot</description>
@@ -12,8 +13,32 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+        <spring-cloud-alibaba.version>2.2.10-RC1</spring-cloud-alibaba.version>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
     </properties>
+
+    <modules>
+        <module>anti-brushing</module>
+        <module>async-program</module>
+        <module>common-util</module>
+        <module>completable-future-demo</module>
+        <module>crawl-order-multi-thread</module>
+        <module>custom-annotation</module>
+        <module>distributed-id</module>
+        <module>distributed-transactions</module>
+        <module>dubbo-zookeeper-demo</module>
+        <module>guava-cache</module>
+        <module>idempotency-guarantee</module>
+        <module>lambda-function-demo</module>
+        <module>limit-policy</module>
+        <module>mybatis-plus-demo</module>
+        <module>quartz-demo</module>
+        <module>rabbitmq-demo</module>
+        <module>redis-mq</module>
+        <module>rocketmq-demo</module>
+        <module>spring-annotation</module>
+    </modules>
 
     <dependencies>
         <dependency>

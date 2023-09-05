@@ -20,6 +20,7 @@
         <module>mybatis-plus-spring</module>
         <module>mybatis-plus-mybatis</module>
         <module>mybatis-plus-generator</module>
+        <module>mybatis-plus-spring-boot</module>
     </modules>
 
     <properties>

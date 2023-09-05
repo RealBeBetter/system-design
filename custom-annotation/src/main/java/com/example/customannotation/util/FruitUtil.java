@@ -16,7 +16,7 @@ public class FruitUtil {
 
         String strFruitName = " 水果名称：";
         String strFruitColor = " 水果颜色：";
-        String strFruitSupplier = "供应商信息：";
+        String strFruitSupplier;
 
         Field[] fields = clazz.getDeclaredFields();
 

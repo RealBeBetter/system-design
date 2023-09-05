@@ -8,34 +8,40 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="limit-policy" />
-        <module name="anti-brushing" />
+        <module name="common-util" />
+        <module name="rabbitmq-demo" />
         <module name="completable-future-demo" />
-        <module name="system-design" />
-        <module name="system-design" />
+        <module name="idempotency-guarantee" />
+        <module name="lambda-function-demo" />
+        <module name="async-program" />
+        <module name="guava-cache" />
+        <module name="mybatis-plus-generator" />
+        <module name="mybatis-plus-mybatis" />
+        <module name="custom-annotation" />
+        <module name="crawl-order-multi-thread" />
+        <module name="redis-mq" />
+        <module name="distributed-transactions" />
+        <module name="mybatis-plus-spring" />
+        <module name="distributed-id" />
+        <module name="quartz-demo" />
+        <module name="rocketmq-demo" />
+        <module name="dubbo-zookeeper-demo" />
+        <module name="spring-annotation" />
+        <module name="anti-brushing" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="anti-brushing" target="1.8" />
-      <module name="async-program" target="1.8" />
-      <module name="completable-future-demo" target="1.8" />
-      <module name="crawl-order-multi-thread" target="1.8" />
-      <module name="custom-annotation" target="1.8" />
-      <module name="distributed-id" target="1.8" />
-      <module name="distributed-transactions" target="1.8" />
-      <module name="dubbo-zookeeper-demo" target="1.8" />
-      <module name="guava-cache" target="1.8" />
-      <module name="idempotency-guarantee" target="1.8" />
-      <module name="lambda-function-demo" target="1.8" />
-      <module name="limit-policy" target="1.8" />
-      <module name="mybatis-plus-demo" target="1.8" />
-      <module name="mybatis-plus-generator" target="1.8" />
-      <module name="mybatis-plus-mybatis" target="1.8" />
-      <module name="mybatis-plus-spring" target="1.8" />
-      <module name="quartz-demo" target="1.8" />
-      <module name="rabbitmq-demo" target="1.8" />
-      <module name="redis-mq" target="1.8" />
-      <module name="rocketmq-demo" target="1.8" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="crawl-order-multi-thread" options="-parameters" />
+      <module name="custom-annotation" options="-parameters" />
+      <module name="idempotency-guarantee" options="-parameters" />
+      <module name="lambda-function-demo" options="-parameters" />
+      <module name="mybatis-plus-demo" options="-parameters" />
+      <module name="mybatis-plus-generator" options="-parameters" />
+      <module name="mybatis-plus-mybatis" options="-parameters" />
+      <module name="mybatis-plus-spring" options="-parameters" />
+      <module name="quartz-demo" options="-parameters" />
+    </option>
   </component>
 </project>
-
