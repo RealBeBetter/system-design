@@ -1,11 +1,14 @@
 package com.company.asyncprogram.completable;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.CompletableFuture;
 
 /**
  * @author Real
  * @since 2022/12/9 1:41
  */
+@Slf4j
 public class CompletableFutureDemo {
 
     public static void main(String[] args) {
@@ -18,7 +21,7 @@ public class CompletableFutureDemo {
                         System.out.println("T1:烧开水...");
                         Thread.sleep(15);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        log.error("error occurred, errorMsg = {}", e.getMessage());
                     }
                 });
 
@@ -34,7 +37,7 @@ public class CompletableFutureDemo {
                         System.out.println("T2:拿茶叶...");
                         Thread.sleep(1);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        log.error("error occurred, errorMsg = {}", e.getMessage());
                     }
                     return "龙井";
                 });

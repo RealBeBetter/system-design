@@ -1,5 +1,7 @@
 package com.company.asyncprogram.future;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
@@ -8,6 +10,7 @@ import java.util.concurrent.FutureTask;
  * @author Real
  * @since 2022/12/9 1:40
  */
+@Slf4j
 public class FutureTaskDemo {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newCachedThreadPool();
@@ -15,8 +18,9 @@ public class FutureTaskDemo {
         FutureTask<Integer> futureTask = new FutureTask<>(() -> {
             System.out.println("子线程开始计算：");
             int sum = 0;
-            for (int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 100; i++) {
                 sum += i;
+            }
             return sum;
         });
 
@@ -26,7 +30,7 @@ public class FutureTaskDemo {
         try {
             System.out.println("task运行结果计算的总和为：" + futureTask.get());
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("error occurred, errorMsg = {}", e.getMessage());
         }
         executor.shutdown();
     }
