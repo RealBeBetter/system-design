@@ -1,9 +1,12 @@
 package com.company.antibrushing.config;
 
+import lombok.Getter;
+
 /**
  * @author Real
  * @since 2022/12/9 0:54
  */
+@Getter
 public enum PreventStrategy {
 
     /**
@@ -12,10 +15,6 @@ public enum PreventStrategy {
     DEFAULT(1),
 
     ;
-
-    public int getValue() {
-        return value;
-    }
 
     private final int value;
 

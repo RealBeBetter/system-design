@@ -1,10 +1,14 @@
 package com.company.antibrushing.common;
 
+import lombok.Getter;
+
 /**
  * @author Real
  * Date: 2022/12/9 0:38
  */
+@Getter
 public class ApiResponse {
+
     private int status;
     private String message;
     private Object data;
@@ -25,24 +29,12 @@ public class ApiResponse {
         return response;
     }
 
-    public int getStatus() {
-        return status;
-    }
-
     public void setStatus(int status) {
         this.status = status;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public Object getData() {
-        return data;
     }
 
     public void setData(Object data) {

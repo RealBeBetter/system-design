@@ -16,6 +16,7 @@
         <module name="async-program" />
         <module name="guava-cache" />
         <module name="mybatis-plus-generator" />
+        <module name="mybatis-plus-spring-boot" />
         <module name="mybatis-plus-mybatis" />
         <module name="custom-annotation" />
         <module name="crawl-order-multi-thread" />
@@ -30,6 +31,9 @@
         <module name="anti-brushing" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-plus_spring-boot" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -41,6 +45,8 @@
       <module name="mybatis-plus-generator" options="-parameters" />
       <module name="mybatis-plus-mybatis" options="-parameters" />
       <module name="mybatis-plus-spring" options="-parameters" />
+      <module name="mybatis-plus-spring-boot" options="-parameters" />
+      <module name="mybatis-plus_spring-boot" options="-parameters" />
       <module name="quartz-demo" options="-parameters" />
     </option>
   </component>
