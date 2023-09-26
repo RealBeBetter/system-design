@@ -37,7 +37,7 @@ public class CacheCreate {
                 // 记录缓存命中
                 .recordStats()
                 // 缓存失效时间
-                .expireAfterAccess(3, TimeUnit.MINUTES)
+                .expireAfterAccess(3, TimeUnit.SECONDS)
                 .build(new CacheLoader<String, String>() {
                     @Override
                     public String load(String key) {
