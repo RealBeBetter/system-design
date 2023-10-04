@@ -26,7 +26,7 @@ public class LarkTool {
 
     public static void main(String[] args) {
         traverseDirectory("/Users/anker/Downloads/markdown/", ".md");
-        traverseDirectory("C:\\Users\\Real\\Documents\\yuque\\docs", ".md");
+        traverseDirectory("C:\\Users\\Real\\Documents\\yuque\\其他", ".md");
     }
 
     public static void replaceTextInFile(String filePath) {
