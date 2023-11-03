@@ -45,7 +45,8 @@ public class LarkTool {
         Matcher matcher = PATTERN.matcher(text);
         StringBuffer sb = new StringBuffer();
         while (matcher.find()) {
-            matcher.appendReplacement(sb, matcher.group(1) + matcher.group(2));
+            String replacement = Matcher.quoteReplacement(matcher.group(1) + matcher.group(2));
+            matcher.appendReplacement(sb, replacement);
         }
         matcher.appendTail(sb);
         return sb.toString();
