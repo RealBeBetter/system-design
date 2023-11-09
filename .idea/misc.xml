@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/custom-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/async-program/pom.xml" />
         <option value="$PROJECT_DIR$/common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/lark-tool/pom.xml" />
       </list>
     </option>
   </component>

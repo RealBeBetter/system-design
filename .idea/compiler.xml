@@ -18,6 +18,7 @@
         <module name="mybatis-plus-generator" />
         <module name="mybatis-plus-spring-boot" />
         <module name="mybatis-plus-mybatis" />
+        <module name="lark-tool" />
         <module name="custom-annotation" />
         <module name="crawl-order-multi-thread" />
         <module name="redis-mq" />

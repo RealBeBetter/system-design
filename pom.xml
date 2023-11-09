@@ -31,6 +31,7 @@
         <module>guava-cache</module>
         <module>idempotency-guarantee</module>
         <module>lambda-function-demo</module>
+        <module>lark-tool</module>
         <module>limit-policy</module>
         <module>mybatis-plus-demo</module>
         <module>quartz-demo</module>

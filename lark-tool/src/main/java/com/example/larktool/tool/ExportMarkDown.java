@@ -3,6 +3,7 @@ package com.example.larktool.tool;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.example.larktool.config.ConfigReader;
 import com.google.common.collect.ImmutableMap;
 import lombok.Data;
 import okhttp3.OkHttpClient;
@@ -102,7 +103,7 @@ public class ExportMarkDown {
         pull(true);
     }
 
-    private static void initApiCfg() {
+    public static void initApiCfg() {
         Properties config = ConfigReader.getConfig("config.properties");
 
         String cookie = config.getProperty("cookie");

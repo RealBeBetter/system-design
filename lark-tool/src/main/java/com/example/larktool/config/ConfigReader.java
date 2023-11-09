@@ -10,6 +10,7 @@ import java.util.Properties;
  * @since 2023/11/01 14:30
  */
 public class ConfigReader {
+
     public static Properties getConfig(String filename) {
         Properties prop = new Properties();
         ClassLoader classLoader = ConfigReader.class.getClassLoader();
