@@ -1,5 +1,7 @@
-package com.company.limitpolicy.annotation;
+package com.company.limitpolicy.annotation.aspect;
 
+import com.company.limitpolicy.annotation.Limiter;
+import com.company.limitpolicy.annotation.RateLimiterType;
 import com.company.limitpolicy.limiter.RateLimiter;
 import com.company.limitpolicy.service.RateLimiterFactory;
 import lombok.extern.slf4j.Slf4j;
