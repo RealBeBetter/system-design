@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisProjectProfileManager">
     <option name="PROJECT_PROFILE" />
@@ -5,6 +6,9 @@
     <list size="0" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/lark-tool" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -15,6 +19,7 @@
         <option value="$PROJECT_DIR$/custom-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/async-program/pom.xml" />
         <option value="$PROJECT_DIR$/common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/lark-tool/pom.xml" />
       </list>
     </option>
   </component>

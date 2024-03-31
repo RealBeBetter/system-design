@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$/anti-brushing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anti-brushing/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/async-program/src/main/java" charset="UTF-8" />
@@ -10,9 +10,7 @@
     <file url="file://$PROJECT_DIR$/completable-future-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/completable-future-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crawl-order-multi-thread/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/crawl-order-multi-thread/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/custom-annotation/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/custom-annotation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/distributed-id/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/distributed-id/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/distributed-transactions/src/main/java" charset="UTF-8" />
@@ -22,23 +20,18 @@
     <file url="file://$PROJECT_DIR$/guava-cache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guava-cache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/idempotency-guarantee/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/idempotency-guarantee/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lambda-function-demo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/lambda-function-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lark-tool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lark-tool/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/limit-policy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/limit-policy/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-generator/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-mybatis/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-mybatis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring-boot/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring-boot/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-spring/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quartz-demo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/quartz-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/redis-mq/src/main/java" charset="UTF-8" />

@@ -2,13 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.company</groupId>
-    <artifactId>system-design</artifactId>
-    <packaging>pom</packaging>
+    <groupId>com.example</groupId>
+    <artifactId>lark-tool</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>system-design</name>
-    <description>Demo project for Spring Boot</description>
-
+    <name>lark-tool</name>
+    <description>lark-tool</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,34 +15,34 @@
         <spring-cloud-alibaba.version>2.2.10-RC1</spring-cloud-alibaba.version>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
     </properties>
-
-    <modules>
-        <module>anti-brushing</module>
-        <module>async-program</module>
-        <module>common-util</module>
-        <module>completable-future-demo</module>
-        <module>crawl-order-multi-thread</module>
-        <module>custom-annotation</module>
-        <module>distributed-id</module>
-        <module>distributed-transactions</module>
-        <module>dubbo-zookeeper-demo</module>
-        <module>guava-cache</module>
-        <module>idempotency-guarantee</module>
-        <module>lambda-function-demo</module>
-        <module>lark-tool</module>
-        <module>limit-policy</module>
-        <module>mybatis-plus-demo</module>
-        <module>quartz-demo</module>
-        <module>rabbitmq-demo</module>
-        <module>redis-mq</module>
-        <module>rocketmq-demo</module>
-        <module>spring-annotation</module>
-    </modules>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.37</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
         </dependency>
 
         <dependency>
@@ -59,13 +57,26 @@
             </exclusions>
         </dependency>
     </dependencies>
-
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -87,9 +98,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.7.RELEASE</version>
+                <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.company.systemdesign.SystemDesignApplication</mainClass>
+                    <mainClass>com.example.larktool.LarkToolApplication</mainClass>
+                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
