@@ -1,5 +1,6 @@
 package com.company.limitpolicy.service;
 
+import com.company.limitpolicy.annotation.RateLimiterType;
 import com.company.limitpolicy.limiter.*;
 
 /**
@@ -23,19 +24,6 @@ public class RateLimiterFactory {
             default:
                 throw new IllegalArgumentException("Unknown rate limiter type");
         }
-    }
-
-
-    public enum RateLimiterType {
-        counter,
-
-        fixed_window,
-
-        sliding_window,
-
-        leak_bucket,
-
-        token_bucket
     }
 
 }

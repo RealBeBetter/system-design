@@ -1,5 +1,6 @@
 package com.company.limitpolicy.controller;
 
+import com.company.limitpolicy.annotation.RateLimiterType;
 import com.company.limitpolicy.entity.Result;
 import com.company.limitpolicy.limiter.RateLimiter;
 import com.company.limitpolicy.service.RateLimiterFactory;
@@ -15,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/custom")
 public class CustomLimiterController {
 
-    public static final RateLimiter COUNTER_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterFactory.RateLimiterType.counter, 2);
-    public static final RateLimiter FIXED_WINDOW_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterFactory.RateLimiterType.fixed_window, 2);
-    public static final RateLimiter SLIDING_WINDOW_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterFactory.RateLimiterType.sliding_window, 2);
-    public static final RateLimiter LEAK_BUCKET_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterFactory.RateLimiterType.leak_bucket, 2);
-    public static final RateLimiter TOKEN_BUCKET_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterFactory.RateLimiterType.token_bucket, 2);
+    public static final RateLimiter COUNTER_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterType.counter, 2);
+    public static final RateLimiter FIXED_WINDOW_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterType.fixed_window, 2);
+    public static final RateLimiter SLIDING_WINDOW_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterType.sliding_window, 2);
+    public static final RateLimiter LEAK_BUCKET_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterType.leak_bucket, 2);
+    public static final RateLimiter TOKEN_BUCKET_LIMITER = RateLimiterFactory.createRateLimiter(RateLimiterType.token_bucket, 2);
 
     @GetMapping("/counter")
     public Result<String> testCounter() {
